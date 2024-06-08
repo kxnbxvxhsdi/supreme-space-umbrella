@@ -14,7 +14,16 @@
       "extensions": [
         "ms-toolsai.jupyter",
         "ms-python.python"
-      ]
+      ]jobs:
+      analyze:
+        name: Analyze
+        runs-on: [ubuntu-latest]
+        - uses: github/codeql-action/init@v3
+  with:
+    db-location: '${{ github.runner_temp }}/my_location'
+
+
+    
     }
   }
 }
